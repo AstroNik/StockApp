@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stockapp
+  labels:
+    app: stockapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: stockapp
+  template:
+    metadata:
+      labels:
+        name: stockapp
+    spec:
+      containers:
+        - name: stockapp
+          image: astronik/stockapp:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
