@@ -43,6 +43,7 @@ func main() {
 	router.HandleFunc("/api/findStock", findStock)
 	spa := spaHandler{staticPath: "./stock/build", indexPath: "index.html"}
 	router.PathPrefix("/").Handler(spa)
+	http.Handle("/stock", router)
 
 	svr := &http.Server{
 		Handler:      router,
