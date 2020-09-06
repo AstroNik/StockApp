@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const getData = (stock) => {
     return (dispatch, getState) => {
-        axios.post('/findStock', {
+        axios.post('/api/findStock', {
             stock: stock.stockName
         }).then(({data}) => {
             dispatch({type: 'GET_DATA', stockData: data})

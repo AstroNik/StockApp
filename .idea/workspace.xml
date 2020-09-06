@@ -6,24 +6,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9956b85-8445-4002-99cb-7b6cc95fe17d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock/yarn.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock/public/img/logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/stock/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/stock/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/src/components/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/stock/src/components/Home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/src/components/Home/StockView/Form.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/stock/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stock/src/components/Home/StockView/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/stock/src/components/Home/StockView/Form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/src/components/Home/StockView/StockView.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/src/components/Home/StockView/StockView.js" beforeDir="false" afterPath="$PROJECT_DIR$/stock/src/components/Home/StockView/StockView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/src/components/NavBar/Links.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/src/components/NavBar/NavBar.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/stock/src/components/NavBar/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/stock/src/components/NavBar/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/src/components/Store/Actions/AuthActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/stock/src/components/Store/Actions/AuthActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stock/src/components/Store/Actions/StockActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/stock/src/components/Store/Actions/StockActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/src/components/Store/Reducer/RootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/stock/src/components/Store/Reducer/RootReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/stock/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock/src/logo.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +47,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nkwebapp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WebAPI" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -114,7 +104,8 @@
     <MESSAGE value="Updated Form" />
     <MESSAGE value="Data now sends to server" />
     <MESSAGE value="Added Dynamic Charts &amp; Data Getting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Dynamic Charts &amp; Data Getting" />
+    <MESSAGE value="Pushing With New Changes/ All Going to Be Over Written" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pushing With New Changes/ All Going to Be Over Written" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -138,50 +129,56 @@
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1599000112156" />
     <state x="-1296" y="202" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1599004491228" />
-    <state x="-1335" y="89" key="CommitChangelistDialog2" timestamp="1597749684506">
-      <screen x="-1920" y="1" width="1920" height="1040" />
-    </state>
-    <state x="-1335" y="89" key="CommitChangelistDialog2/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1597749684506" />
-    <state x="468" y="0" key="CommitChangelistDialog2/0.0.1536.824/-1920.1.1920.1040@0.0.1536.824" timestamp="1593492303325" />
-    <state x="548" y="167" key="FileChooserDialogImpl" timestamp="1599184532407">
+    <state x="468" y="0" key="CommitChangelistDialog2" timestamp="1599184662140">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="-1335" y="89" key="CommitChangelistDialog2/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1597749684506" />
+    <state x="468" y="0" key="CommitChangelistDialog2/0.0.1536.824/-1920.1.1920.1040@0.0.1536.824" timestamp="1599184662140" />
+    <state x="-1235" y="212" key="FileChooserDialogImpl" timestamp="1599345887420">
+      <screen x="-1920" y="1" width="1920" height="1040" />
+    </state>
     <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1598999574337" />
-    <state x="-1235" y="212" key="FileChooserDialogImpl/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1599064242718" />
-    <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824/-1920.1.1920.1040@0.0.1536.824" timestamp="1599184532407" />
+    <state x="-1235" y="212" key="FileChooserDialogImpl/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1599345887420" />
+    <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824/-1920.1.1920.1040@0.0.1536.824" timestamp="1599184951290" />
+    <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1599194434654" />
     <state x="670" y="331" key="Github.ShareDialog" timestamp="1594755431913">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="-1082" y="419" key="Github.ShareDialog/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1593472336188" />
     <state x="670" y="331" key="Github.ShareDialog/0.0.1536.824/-1920.1.1920.1040@0.0.1536.824" timestamp="1594755431913" />
-    <state width="1493" height="96" key="GridCell.Tab.0.bottom" timestamp="1599000685446">
+    <state width="1493" height="132" key="GridCell.Tab.0.bottom" timestamp="1599359638799">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="96" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1599000685446" />
-    <state width="1877" height="134" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1597511641235" />
+    <state width="1877" height="132" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1599346326790" />
     <state width="1493" height="224" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.1.1920.1040@0.0.1536.824" timestamp="1597350482460" />
-    <state width="1493" height="96" key="GridCell.Tab.0.center" timestamp="1599000685446">
+    <state width="1493" height="132" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1599359638799" />
+    <state width="1493" height="132" key="GridCell.Tab.0.center" timestamp="1599359638798">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="96" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1599000685446" />
-    <state width="1877" height="134" key="GridCell.Tab.0.center/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1597511641235" />
+    <state width="1877" height="132" key="GridCell.Tab.0.center/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1599346326790" />
     <state width="1493" height="224" key="GridCell.Tab.0.center/0.0.1536.824/-1920.1.1920.1040@0.0.1536.824" timestamp="1597350482460" />
-    <state width="1493" height="96" key="GridCell.Tab.0.left" timestamp="1599000685446">
+    <state width="1493" height="132" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1599359638798" />
+    <state width="1493" height="132" key="GridCell.Tab.0.left" timestamp="1599359638798">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="96" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1599000685446" />
-    <state width="1877" height="134" key="GridCell.Tab.0.left/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1597511641234" />
+    <state width="1877" height="132" key="GridCell.Tab.0.left/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1599346326790" />
     <state width="1493" height="224" key="GridCell.Tab.0.left/0.0.1536.824/-1920.1.1920.1040@0.0.1536.824" timestamp="1597350482459" />
-    <state width="1493" height="96" key="GridCell.Tab.0.right" timestamp="1599000685446">
+    <state width="1493" height="132" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1599359638798" />
+    <state width="1493" height="132" key="GridCell.Tab.0.right" timestamp="1599359638798">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="96" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1599000685446" />
-    <state width="1877" height="134" key="GridCell.Tab.0.right/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1597511641235" />
+    <state width="1877" height="132" key="GridCell.Tab.0.right/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1599346326790" />
     <state width="1493" height="224" key="GridCell.Tab.0.right/0.0.1536.824/-1920.1.1920.1040@0.0.1536.824" timestamp="1597350482460" />
-    <state x="-1169" y="223" key="RollbackChangesDialog" timestamp="1593472345908">
-      <screen x="-1920" y="1" width="1920" height="1040" />
+    <state width="1493" height="132" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1599359638798" />
+    <state x="601" y="176" key="RollbackChangesDialog" timestamp="1599359087916">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="-1169" y="223" key="RollbackChangesDialog/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1593472345908" />
+    <state x="601" y="176" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1599359087916" />
     <state x="-1459" y="166" key="SettingsEditor" timestamp="1593474826174">
       <screen x="-1920" y="1" width="1920" height="1040" />
     </state>
@@ -190,11 +187,11 @@
       <screen x="-1920" y="1" width="1920" height="1040" />
     </state>
     <state x="-1197" y="225" key="VCS.ChangeListViewerDialog/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1593473677592" />
-    <state x="-1368" y="254" key="Vcs.Push.Dialog.v2" timestamp="1597749690472">
-      <screen x="-1920" y="1" width="1920" height="1040" />
+    <state x="442" y="200" key="Vcs.Push.Dialog.v2" timestamp="1599184674055">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="-1368" y="254" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1597749690472" />
-    <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1920.1.1920.1040@0.0.1536.824" timestamp="1593491994050" />
+    <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1920.1.1920.1040@0.0.1536.824" timestamp="1599184674055" />
     <state x="-608" y="369" key="cloudConfig.SelfSettingsDialog" timestamp="1593473188411">
       <screen x="-1920" y="1" width="1920" height="1040" />
     </state>

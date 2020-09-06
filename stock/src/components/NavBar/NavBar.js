@@ -4,8 +4,10 @@ import {Navbar} from "react-bootstrap";
 class NavBar extends Component {
     render() {
         return (
-            <Navbar bg="dark" expand="lg" >
-                <Navbar.Brand href="/"> Stock </Navbar.Brand>
+            <Navbar bg="dark" expand="lg" className="justify-content-center">
+                <Navbar.Brand href="/">
+                    <img src="img/logo.png" alt="logo" width="150px"/>
+                </Navbar.Brand>
             </Navbar>
         )
     }

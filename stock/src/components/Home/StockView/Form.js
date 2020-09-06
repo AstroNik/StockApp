@@ -22,8 +22,8 @@ class Form extends Component {
 
     render() {
         return (
-            <Card className="col-md-12">
-                <div className="row">
+            <Card className="col-md-12 mt-2 pb-2">
+                <div className="row mt-3">
                     <div className="col-md-4 w-100">
                         <form onSubmit={this.handleSubmit} className="w-100">
                             <h4> Find Stock </h4>
@@ -37,14 +37,25 @@ class Form extends Component {
                             <button type="Find Stock" className="btn btn-primary btn-block w-100">Submit</button>
                         </form>
                     </div>
-                    <div className="col-md-8">
-                        <ol>
-                            <li> open - "514.4000"</li>
-                            <li> high - "514.6900"</li>
-                            <li> low - "514.1600"</li>
-                            <li> close - "514.4300"</li>
-                            <li> volume - "28811"</li>
-                        </ol>
+                    <div className="col-md-8 row justify-content-around mt-auto mb-auto">
+                        <div className="col-md-4">
+                            <ol>
+                                <li> open - {}</li>
+                                <li> high - "514.6900"</li>
+                                <li> low - "514.1600"</li>
+                                <li> close - "514.4300"</li>
+                                <li> volume - "28811"</li>
+                            </ol>
+                        </div>
+                        <div className="col-md-4">
+                            <ol>
+                                <li> open - "514.4000"</li>
+                                <li> high - "514.6900"</li>
+                                <li> low - "514.1600"</li>
+                                <li> close - "514.4300"</li>
+                                <li> volume - "28811"</li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
             </Card>
