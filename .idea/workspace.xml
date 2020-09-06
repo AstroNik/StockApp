@@ -7,8 +7,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f9956b85-8445-4002-99cb-7b6cc95fe17d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/stock/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/stock/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +101,9 @@
     <MESSAGE value="Pushing With New Changes/ All Going to Be Over Written" />
     <MESSAGE value="Added proper SPA Handler, Added Logo, Fixed Styling" />
     <MESSAGE value="Testing connection to portfolio website" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testing connection to portfolio website" />
+    <MESSAGE value="Never pushed this change to github" />
+    <MESSAGE value="Changing path prefix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changing path prefix" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -126,10 +127,10 @@
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1599000112156" />
     <state x="-1296" y="202" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1599004491228" />
-    <state x="468" y="0" key="CommitChangelistDialog2" timestamp="1599420088584">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="-1335" y="89" key="CommitChangelistDialog2" timestamp="1599421645997">
+      <screen x="-1920" y="1" width="1920" height="1040" />
     </state>
-    <state x="-1335" y="89" key="CommitChangelistDialog2/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1597749684506" />
+    <state x="-1335" y="89" key="CommitChangelistDialog2/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1599421645997" />
     <state x="468" y="0" key="CommitChangelistDialog2/0.0.1536.824/-1920.1.1920.1040@0.0.1536.824" timestamp="1599420088584" />
     <state x="468" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1599359813908" />
     <state x="548" y="167" key="FileChooserDialogImpl" timestamp="1599419545060">
@@ -185,10 +186,10 @@
       <screen x="-1920" y="1" width="1920" height="1040" />
     </state>
     <state x="-1197" y="225" key="VCS.ChangeListViewerDialog/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1593473677592" />
-    <state x="-1368" y="254" key="Vcs.Push.Dialog.v2" timestamp="1599412234860">
+    <state x="-1368" y="254" key="Vcs.Push.Dialog.v2" timestamp="1599421676106">
       <screen x="-1920" y="1" width="1920" height="1040" />
     </state>
-    <state x="-1368" y="254" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1599412234860" />
+    <state x="-1368" y="254" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1599421676106" />
     <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1920.1.1920.1040@0.0.1536.824" timestamp="1599184674055" />
     <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1599359817929" />
     <state x="-608" y="369" key="cloudConfig.SelfSettingsDialog" timestamp="1593473188411">

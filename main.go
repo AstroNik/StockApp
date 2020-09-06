@@ -42,7 +42,7 @@ func main() {
 	//Serve Other Routes Above PathPrefix
 	router.HandleFunc("/api/findStock", findStock)
 	spa := spaHandler{staticPath: "./stock/build", indexPath: "index.html"}
-	router.PathPrefix("/stock").Handler(spa)
+	router.PathPrefix("/").Handler(spa)
 
 	svr := &http.Server{
 		Handler:      router,
