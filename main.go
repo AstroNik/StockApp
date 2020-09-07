@@ -27,6 +27,7 @@ func (h spaHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 	_, err = os.Stat(path)
 	if os.IsNotExist(err) {
+		log.Print(err)
 		http.ServeFile(w, r, filepath.Join(h.staticPath, h.indexPath))
 		return
 	} else if err != nil {
@@ -38,11 +39,11 @@ func (h spaHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	router := mux.NewRouter().StrictSlash(true)
+	router := mux.NewRouter()
 	//Serve Other Routes Above PathPrefix
 	router.HandleFunc("/api/findStock", findStock)
 	spa := spaHandler{staticPath: "./stock/build", indexPath: "index.html"}
-	router.PathPrefix("/").Handler(spa)
+	router.PathPrefix("/stock").Handler(http.StripPrefix("/stock", spa))
 
 	svr := &http.Server{
 		Handler:      router,
