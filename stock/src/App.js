@@ -12,7 +12,7 @@ class App extends Component {
             <section>
               <NavBar/>
               <Switch>
-                <Route exact path='/stock'  component={Home}/>
+                <Route exact path='/'  component={Home}/>
               </Switch>
             </section>
           </div>
