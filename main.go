@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/gocolly/colly"
 	"github.com/gorilla/mux"
 	"log"
 	"net/http"
@@ -42,6 +43,7 @@ func main() {
 	router := mux.NewRouter()
 	//Serve Other Routes Above PathPrefix
 	router.HandleFunc("/stock/api/findStock", findStock)
+	router.HandleFunc("/stock/api/scrape", scrapeWeb)
 	spa := spaHandler{staticPath: "./stock/build", indexPath: "index.html"}
 	router.PathPrefix("/stock").Handler(http.StripPrefix("/stock", spa))
 
@@ -55,21 +57,42 @@ func main() {
 	log.Fatal(svr.ListenAndServe())
 }
 
-type Stock struct {
+type Options struct {
 	//ID primitive.ObjectID `bson:"_id,omitempty"`
-	Stock string `json:"stock"`
+	Stock      string
+	TimeSeries string
+	Interval   string
+	OutputSize string
 }
 
 func findStock(w http.ResponseWriter, r *http.Request) {
-	var stock Stock
-	err := json.NewDecoder(r.Body).Decode(&stock)
+	var data Options
+	err := json.NewDecoder(r.Body).Decode(&data)
 	if err != nil {
 		fmt.Println("error decoding the response")
 		log.Fatal(err)
 	}
-	log.Printf("Find Stock %+v", stock)
+	log.Printf("Request Data %+v", data)
 
-	resp, err := http.Get("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=" + stock.Stock + "&apikey=ZNIJUAPDSSCOJDE5")
+	var url = "https://www.alphavantage.co/query?"
+	if data.TimeSeries == "TIME_SERIES_INTRADAY" {
+		url = url + "function=" + data.TimeSeries + "&symbol=" + data.Stock + "&interval=" + data.Interval
+		if data.OutputSize == "full" {
+			url = url + "&outputsize=" + data.OutputSize
+		}
+	}
+	if data.TimeSeries == "TIME_SERIES_DAILY" || data.TimeSeries == "TIME_SERIES_DAILY_ADJUSTED" {
+		url = url + "function=" + data.TimeSeries + "&symbol=" + data.Stock
+		if data.OutputSize == "full" {
+			url = url + "&outputsize=" + data.OutputSize
+		}
+	}
+
+	url = url + "&apikey=ZNIJUAPDSSCOJDE5"
+
+	log.Print(url)
+
+	resp, err := http.Get(url)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -82,7 +105,25 @@ func findStock(w http.ResponseWriter, r *http.Request) {
 
 	delete(stockData, "Meta Data")
 	var cleanedStockData interface{}
-	cleanedStockData = stockData["Time Series (Daily)"]
+
+	if data.TimeSeries == "TIME_SERIES_INTRADAY" {
+		cleanedStockData = stockData["Time Series ("+data.Interval+")"]
+	}
+	if data.TimeSeries == "TIME_SERIES_DAILY" || data.TimeSeries == "TIME_SERIES_DAILY_ADJUSTED" {
+		cleanedStockData = stockData["Time Series (Daily)"]
+	}
+
+	log.Printf("Cleaned Stock Data %+v", cleanedStockData)
 
 	_ = json.NewEncoder(w).Encode(cleanedStockData)
+}
+
+func scrapeWeb(w http.ResponseWriter, r *http.Request) {
+	c := colly.NewCollector()
+
+	c.OnRequest(func(r *colly.Request) {
+		fmt.Println("Visiting", r.URL.String())
+	})
+
+	_ = c.Visit("https://news.google.com/search?q=TSLA")
 }

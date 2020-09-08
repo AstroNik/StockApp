@@ -1,5 +1,11 @@
 const initState = {
-    stocks: {}
+    options: {
+        stock: '',
+        timeSeries: '',
+        interval: '',
+        outputSize: '',
+    },
+    stockData: {}
 }
 
 const StockReducer = (state = initState, action) => {
@@ -8,7 +14,8 @@ const StockReducer = (state = initState, action) => {
             console.log('get stock data', action.stock)
             return{
                 ...state,
-                stocks: action.stockData
+                stockData: action.stockData,
+                options: action.options
             }
         default:
             return state

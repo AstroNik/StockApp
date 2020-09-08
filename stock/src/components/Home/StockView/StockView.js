@@ -2,16 +2,17 @@ import React, {useEffect, useState} from 'react'
 import Form from './Form'
 import {Line} from "react-chartjs-2";
 import {connect} from "react-redux";
-import {Card, Container} from "react-bootstrap";
+import {Card, Col, Container, Row} from "react-bootstrap";
 
 const StockView = (props) => {
-    const {stock} = props
+    const {stockData, stockOptions} = props
     let [chartData, setChartData] = useState({})
+    console.log(stockOptions)
 
 
-    function isEmpty(stock) {
-        for (let prop in stock) {
-            if (stock.hasOwnProperty(prop))
+    function isEmpty(stockData) {
+        for (let prop in stockData) {
+            if (stockData.hasOwnProperty(prop))
                 return false;
         }
         return true;
@@ -21,11 +22,11 @@ const StockView = (props) => {
     useEffect(() => {
         let chartData = []
 
-        if (!isEmpty(stock)) {
-            for (let key in stock) {
+        if (!isEmpty(stockData)) {
+            for (let key in stockData) {
                 const container = {}
                 container.x = key
-                container.y = stock[key]['5. adjusted close']
+                container.y = stockData[key]['1. open']
                 chartData.push(container)
             }
         }
@@ -45,7 +46,7 @@ const StockView = (props) => {
         }
 
         chart()
-    }, [stock]);
+    }, [stockData]);
 
     const options = {
         scales: {
@@ -79,11 +80,31 @@ const StockView = (props) => {
 
     return (
         <Container>
-            <div style={{width: "100%", height: "100%"}}>
+            <div className="w-100 h-100">
                 <Form/>
-                <Card style={{width: "100%", height: "100%"}}>
-                    <Line data={chartData} options={options}/>
-                </Card>
+                <Row>
+                    <Card className="col-md-8">
+                        <Line data={chartData} options={options}/>
+                    </Card>
+                    <Card className="col-md-4 p-2">
+                        <div>
+                            <h5> Chart Options </h5>
+                            <Col>
+                                <label> Select X Value: </label>
+                                <select className="ml-2 w-25">
+
+                                </select>
+                            </Col>
+                            <Col>
+                                <label> Select Y Value: </label>
+                                <select className="ml-2 w-25">
+
+                                </select>
+                            </Col>
+
+                        </div>
+                    </Card>
+                </Row>
             </div>
         </Container>
     )
@@ -91,9 +112,11 @@ const StockView = (props) => {
 }
 
 const mapStateToProps = (state) => {
-    const stock = state.stock.stocks;
+    const stockData = state.stock.stockData;
+    const options = state.stock.options;
     return {
-        stock: stock
+        stockData: stockData,
+        stockOptions: options,
     }
 }
 
