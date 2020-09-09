@@ -1,26 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand />
     <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9956b85-8445-4002-99cb-7b6cc95fe17d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock/src/components/Home/StockView/ChartOptions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/stock/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/stock/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock/src/components/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/stock/src/components/Home/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stock/src/components/Home/StockView/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/stock/src/components/Home/StockView/Form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stock/src/components/Home/StockView/StockView.js" beforeDir="false" afterPath="$PROJECT_DIR$/stock/src/components/Home/StockView/StockView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock/src/components/NavBar/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/stock/src/components/NavBar/NavBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stock/src/components/Store/Actions/StockActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/stock/src/components/Store/Actions/StockActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stock/src/components/Store/Reducer/StockReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/stock/src/components/Store/Reducer/StockReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/stock/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="GOROOT" path="C:\Go" />
   <component name="Git.Settings">
@@ -50,9 +61,10 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WebAPI" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nkwebapp" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\GoLand 2019.3.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -121,7 +133,8 @@
     <MESSAGE value="added /stock" />
     <MESSAGE value="Found fix" />
     <MESSAGE value="Testing data retrieval for live version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testing data retrieval for live version" />
+    <MESSAGE value="Added Selectable Options.&#10;&#10;Need to add chart options to show correct chart data.&#10;&#10;Need to change component to class component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Selectable Options.&#10;&#10;Need to add chart options to show correct chart data.&#10;&#10;Need to change component to class component" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -140,22 +153,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/-1920.1.1920.1040@0.0.1536.824" timestamp="1593491068602" />
+    <state x="-1360" y="221" width="800" height="600" key="#com.intellij.featureStatistics.actions.ShowFeatureUsageStatisticsDialog" timestamp="1599535884242">
+      <screen x="-1920" y="1" width="1920" height="1040" />
+    </state>
+    <state x="-1360" y="221" width="800" height="600" key="#com.intellij.featureStatistics.actions.ShowFeatureUsageStatisticsDialog/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1599535884242" />
     <state x="-1296" y="202" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599004491228">
       <screen x="-1920" y="1" width="1920" height="1040" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1599000112156" />
     <state x="-1296" y="202" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1599004491228" />
-    <state x="468" y="0" key="CommitChangelistDialog2" timestamp="1599502694263">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="-1335" y="89" key="CommitChangelistDialog2" timestamp="1599526298071">
+      <screen x="-1920" y="1" width="1920" height="1040" />
     </state>
-    <state x="-1335" y="89" key="CommitChangelistDialog2/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1599494232280" />
+    <state x="-1335" y="89" key="CommitChangelistDialog2/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1599526298071" />
     <state x="468" y="0" key="CommitChangelistDialog2/0.0.1536.824/-1920.1.1920.1040@0.0.1536.824" timestamp="1599502694263" />
     <state x="468" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1599359813908" />
-    <state x="-1235" y="212" key="FileChooserDialogImpl" timestamp="1599516069964">
+    <state x="-1235" y="212" key="FileChooserDialogImpl" timestamp="1599601332397">
       <screen x="-1920" y="1" width="1920" height="1040" />
     </state>
     <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1598999574337" />
-    <state x="-1235" y="212" key="FileChooserDialogImpl/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1599516069964" />
+    <state x="-1235" y="212" key="FileChooserDialogImpl/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1599601332397" />
     <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824/-1920.1.1920.1040@0.0.1536.824" timestamp="1599426547868" />
     <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1599491920662" />
     <state x="670" y="331" key="Github.ShareDialog" timestamp="1594755431913">
@@ -163,38 +180,38 @@
     </state>
     <state x="-1082" y="419" key="Github.ShareDialog/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1593472336188" />
     <state x="670" y="331" key="Github.ShareDialog/0.0.1536.824/-1920.1.1920.1040@0.0.1536.824" timestamp="1594755431913" />
-    <state width="1877" height="178" key="GridCell.Tab.0.bottom" timestamp="1599525473363">
+    <state width="1877" height="177" key="GridCell.Tab.0.bottom" timestamp="1599617561865">
       <screen x="-1920" y="1" width="1920" height="1040" />
     </state>
     <state width="1493" height="96" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1599000685446" />
-    <state width="1877" height="178" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1599525473363" />
+    <state width="1877" height="177" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1599617561865" />
     <state width="1493" height="131" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.1.1920.1040@0.0.1536.824" timestamp="1599502660293" />
     <state width="1493" height="132" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1599359638799" />
-    <state width="1877" height="178" key="GridCell.Tab.0.center" timestamp="1599525473363">
+    <state width="1877" height="177" key="GridCell.Tab.0.center" timestamp="1599617561865">
       <screen x="-1920" y="1" width="1920" height="1040" />
     </state>
     <state width="1493" height="96" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1599000685446" />
-    <state width="1877" height="178" key="GridCell.Tab.0.center/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1599525473363" />
+    <state width="1877" height="177" key="GridCell.Tab.0.center/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1599617561865" />
     <state width="1493" height="131" key="GridCell.Tab.0.center/0.0.1536.824/-1920.1.1920.1040@0.0.1536.824" timestamp="1599502660292" />
     <state width="1493" height="132" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1599359638798" />
-    <state width="1877" height="178" key="GridCell.Tab.0.left" timestamp="1599525473363">
+    <state width="1877" height="177" key="GridCell.Tab.0.left" timestamp="1599617561865">
       <screen x="-1920" y="1" width="1920" height="1040" />
     </state>
     <state width="1493" height="96" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1599000685446" />
-    <state width="1877" height="178" key="GridCell.Tab.0.left/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1599525473363" />
+    <state width="1877" height="177" key="GridCell.Tab.0.left/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1599617561865" />
     <state width="1493" height="131" key="GridCell.Tab.0.left/0.0.1536.824/-1920.1.1920.1040@0.0.1536.824" timestamp="1599502660292" />
     <state width="1493" height="132" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1599359638798" />
-    <state width="1877" height="178" key="GridCell.Tab.0.right" timestamp="1599525473363">
+    <state width="1877" height="177" key="GridCell.Tab.0.right" timestamp="1599617561865">
       <screen x="-1920" y="1" width="1920" height="1040" />
     </state>
     <state width="1493" height="96" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1599000685446" />
-    <state width="1877" height="178" key="GridCell.Tab.0.right/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1599525473363" />
+    <state width="1877" height="177" key="GridCell.Tab.0.right/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1599617561865" />
     <state width="1493" height="131" key="GridCell.Tab.0.right/0.0.1536.824/-1920.1.1920.1040@0.0.1536.824" timestamp="1599502660293" />
     <state width="1493" height="132" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1599359638798" />
-    <state x="601" y="176" key="RollbackChangesDialog" timestamp="1599359790662">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="-1169" y="223" key="RollbackChangesDialog" timestamp="1599612469630">
+      <screen x="-1920" y="1" width="1920" height="1040" />
     </state>
-    <state x="-1169" y="223" key="RollbackChangesDialog/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1593472345908" />
+    <state x="-1169" y="223" key="RollbackChangesDialog/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1599612469630" />
     <state x="601" y="176" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1599359790662" />
     <state x="-1459" y="166" key="SettingsEditor" timestamp="1593474826174">
       <screen x="-1920" y="1" width="1920" height="1040" />
@@ -239,9 +256,9 @@
       <screen x="-1920" y="1" width="1920" height="1040" />
     </state>
     <state x="-1177" y="415" key="git4idea.ui.GitResetDialog/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1593473680831" />
-    <state x="-1784" y="181" width="670" height="676" key="search.everywhere.popup" timestamp="1597353953601">
+    <state x="-1784" y="181" width="672" height="676" key="search.everywhere.popup" timestamp="1599536064172">
       <screen x="-1920" y="1" width="1920" height="1040" />
     </state>
-    <state x="-1784" y="181" width="670" height="676" key="search.everywhere.popup/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1597353953601" />
+    <state x="-1784" y="181" width="672" height="676" key="search.everywhere.popup/0.0.1536.824/-1920.1.1920.1040@-1920.1.1920.1040" timestamp="1599536064172" />
   </component>
 </project>

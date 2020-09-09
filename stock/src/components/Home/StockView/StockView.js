@@ -1,14 +1,13 @@
 import React, {useEffect, useState} from 'react'
-import Form from './Form'
 import {Line} from "react-chartjs-2";
 import {connect} from "react-redux";
-import {Card, Col, Container, Row} from "react-bootstrap";
+import {Card} from "react-bootstrap";
 
 const StockView = (props) => {
-    const {stockData, stockOptions} = props
-    let [chartData, setChartData] = useState({})
-    console.log(stockOptions)
-
+    const {stockData, yValue} = props
+    const [chartData, setChartData] = useState({})
+    const [oldYValue, setOldYValue] = useState(yValue)
+    const [label, setLabel] = useState("")
 
     function isEmpty(stockData) {
         for (let prop in stockData) {
@@ -18,15 +17,14 @@ const StockView = (props) => {
         return true;
     }
 
-
     useEffect(() => {
         let chartData = []
 
-        if (!isEmpty(stockData)) {
+        if (!isEmpty(stockData) || oldYValue !== yValue) {
             for (let key in stockData) {
                 const container = {}
                 container.x = key
-                container.y = stockData[key]['1. open']
+                container.y = stockData[key][yValue]
                 chartData.push(container)
             }
         }
@@ -36,7 +34,7 @@ const StockView = (props) => {
                 // labels: [moment().startOf('day'), moment().endOf('day')],
                 datasets: [
                     {
-                        label: "Stock Price",
+                        label: yValue.substring(3),
                         data: chartData,
                         backgroundColor: ['rgba(75,192,192,0.6)'],
                         borderWidth: 4
@@ -45,8 +43,17 @@ const StockView = (props) => {
             })
         }
 
+        setOldYValue(yValue)
+
+        if(yValue.substring(3) === "volume"){
+
+            setLabel("Volume")
+        } else {
+            setLabel("Price ($)")
+        }
+
         chart()
-    }, [stockData]);
+    }, [stockData, yValue, oldYValue]);
 
     const options = {
         scales: {
@@ -58,20 +65,11 @@ const StockView = (props) => {
                 type: 'time',
                 display: true,
                 distribution: 'linear',
-                time: {
-                    // unit: 'minute',
-                    // unitStepSize: 30,
-                    // displayFormats: {
-                    //     hour: 'h:mm a',
-                    //     min: moment().startOf('day'),
-                    //     max: moment().endOf('day'),
-                    // }
-                }
             }],
             yAxes: [{
                 scaleLabel: {
                     display: true,
-                    labelString: 'Price ($)',
+                    labelString: label,
                 },
             }]
         }
@@ -79,44 +77,21 @@ const StockView = (props) => {
 
 
     return (
-        <Container>
-            <div className="w-100 h-100">
-                <Form/>
-                <Row>
-                    <Card className="col-md-8">
-                        <Line data={chartData} options={options}/>
-                    </Card>
-                    <Card className="col-md-4 p-2">
-                        <div>
-                            <h5> Chart Options </h5>
-                            <Col>
-                                <label> Select X Value: </label>
-                                <select className="ml-2 w-25">
-
-                                </select>
-                            </Col>
-                            <Col>
-                                <label> Select Y Value: </label>
-                                <select className="ml-2 w-25">
-
-                                </select>
-                            </Col>
-
-                        </div>
-                    </Card>
-                </Row>
+        <Card className="h-100" style={{width:"60vw"}}>
+            <div className="mt-auto mb-auto">
+                <Line data={chartData} options={options} redraw={true}/>
             </div>
-        </Container>
+        </Card>
     )
 
 }
 
 const mapStateToProps = (state) => {
-    const stockData = state.stock.stockData;
-    const options = state.stock.options;
+    const {stockData, options, yValue} = state.stock
     return {
         stockData: stockData,
         stockOptions: options,
+        yValue: yValue,
     }
 }
 

@@ -1,0 +1,4 @@
+.landing-page {
+    margin-top: 63px;
+    height: calc(100vh - 63px);
+}

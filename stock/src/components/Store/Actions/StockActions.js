@@ -14,3 +14,15 @@ export const getData = (options) => {
         })
     }
 }
+
+export const setChartOptions = (options) => {
+    return (dispatch, getState) => {
+        dispatch({type: 'SET_CHART_DATA', yValue: options})
+    }
+}
+
+export const setChatYValue = (options) => {
+    return (dispatch, getState) => {
+        dispatch({type: 'SET_SERIES', series: options})
+    }
+}
