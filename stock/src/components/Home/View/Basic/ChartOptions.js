@@ -26,6 +26,7 @@ class ChartOptions extends Component {
             <Card className="p-5 h-100 justify-content-between" style={{width: "20vw"}}>
                 <div>
                     <h4 style={{textAlign: "center"}}> Technical Indicators </h4>
+                    <p> STILL IMPLEMENTING </p>
                     <br/>
                     <FormControl variant="outlined">
                         <InputLabel id="tIndicators-label">Indicator</InputLabel>

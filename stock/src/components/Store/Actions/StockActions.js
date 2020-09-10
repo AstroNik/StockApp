@@ -10,14 +10,13 @@ function parseData(chartData) {
             if (newKey !== "volume") {
                 container[subKey.substring(3)] = +parseFloat(chartData[key][subKey])
             } else {
-                container[subKey.substring(3)] = parseInt(chartData[key][subKey])
+                container[subKey.substring(3)] = +parseInt(chartData[key][subKey])
             }
         }
         data.push(container)
     }
     return data
 }
-
 
 export const getData = (options) => {
     return (dispatch, getState) => {

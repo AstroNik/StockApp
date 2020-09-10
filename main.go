@@ -113,6 +113,8 @@ func findStock(w http.ResponseWriter, r *http.Request) {
 		cleanedStockData = stockData["Time Series (Daily)"]
 	}
 
+	//fixedData := DataCleaner.ConvertData(cleanedStockData)
+
 	log.Printf("Cleaned Stock Data %+v", cleanedStockData)
 
 	_ = json.NewEncoder(w).Encode(cleanedStockData)
@@ -126,22 +128,4 @@ func scrapeWeb(w http.ResponseWriter, r *http.Request) {
 	})
 
 	_ = c.Visit("https://news.google.com/search?q=TSLA")
-}
-
-func test() {
-	resp, err := http.Get("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=ZNIJUAPDSSCOJDE5")
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	var stockData map[string]interface{}
-	err = json.NewDecoder(resp.Body).Decode(&stockData)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	delete(stockData, "Meta Data")
-	var cleanedStockData interface{}
-	cleanedStockData = stockData["Time Series (5min)"]
-	log.Printf("Cleaned Stock Data %+v", cleanedStockData)
 }

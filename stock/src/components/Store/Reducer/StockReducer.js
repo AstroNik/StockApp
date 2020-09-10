@@ -13,7 +13,7 @@ const initState = {
 const StockReducer = (state = initState, action) => {
     switch (action.type) {
         case 'GET_DATA':
-            console.log('get stock data', action.stockData)
+            console.log('Stock data retrieved')
             return{
                 ...state,
                 stockData: action.stockData,

@@ -31,7 +31,7 @@ class StockView extends Component {
         return (
             <Card className="h-100" style={{width: "60vw"}}>
                 <div className="mt-auto mb-auto">
-                    {!chartData.empty ? (
+                    {this.isEmpty(chartData) ? (
                         <div> No Data </div>
                     ) : (
                         <CandleStickChart data={this.state.chartData}/>
