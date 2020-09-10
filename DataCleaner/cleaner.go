@@ -1,6 +1,8 @@
 package DataCleaner
 
 import (
+	"encoding/json"
+	"fmt"
 	"log"
 	"strconv"
 	"strings"
@@ -72,4 +74,52 @@ func getBetterDataObj(dataObj interface{}) BetterData {
 	}
 
 	return betterData
+}
+
+type IncomingData struct {
+	Open   float64 `json:"1. open"`
+	High   float64 `json:"2. high"`
+	Low    float64 `json:"3. low"`
+	Close  float64 `json:"4. close"`
+	Volume int     `json:"5. volume"`
+}
+
+type OutGoingData struct {
+	Date   string  `json:"date"`
+	Open   float64 `json:"open"`
+	High   float64 `json:"high"`
+	Low    float64 `json:"low"`
+	Close  float64 `json:"close"`
+	Volume int     `json:"volume"`
+}
+
+func CleanedData(m map[string]interface{}) []OutGoingData {
+	temp, err := json.Marshal(m)
+	if err != nil {
+		panic(err)
+	}
+
+	data := map[string]IncomingData{}
+	if err := json.Unmarshal(temp, &data); err != nil {
+		panic(err)
+	}
+
+	var data2 []OutGoingData
+	for date, d1 := range data {
+		var d2 OutGoingData
+		d2.Date = date
+		d2.Open = d1.Open
+		d2.High = d1.High
+		d2.Low = d1.Low
+		d2.Close = d1.Close
+		d2.Volume = d1.Volume
+		data2 = append(data2, d2)
+	}
+
+	out, err := json.MarshalIndent(data2, "", "  ")
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println(string(out))
+	return data2
 }
