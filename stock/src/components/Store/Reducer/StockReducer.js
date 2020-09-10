@@ -5,7 +5,7 @@ const initState = {
         interval: '',
         outputSize: '',
     },
-    stockData: {},
+    stockData: [],
     yValue: '1. open',
     series: ''
 }

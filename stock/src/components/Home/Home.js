@@ -1,9 +1,9 @@
 import React, {Component} from "react";
-import './StockView/StockView'
-import StockView from "./StockView/StockView";
+import './View/Basic/StockView/StockView'
+import StockView from "./View/Basic/StockView/StockView";
 import {Row} from "react-bootstrap";
-import Form from "./StockView/Form";
-import ChartOptions from "./StockView/ChartOptions";
+import Form from "./View/Basic/Form";
+import ChartOptions from "./View/Basic/ChartOptions";
 import {connect} from "react-redux";
 
 class Home extends Component {

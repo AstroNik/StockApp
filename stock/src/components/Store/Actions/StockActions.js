@@ -1,5 +1,24 @@
 import axios from "axios";
 
+function parseData(chartData) {
+    let data = []
+    for (let key in chartData) {
+        const container = {}
+        container.date = new Date(key)
+        for (let subKey in chartData[key]) {
+            let newKey = subKey.substring(3)
+            if (newKey !== "volume") {
+                container[subKey.substring(3)] = +parseFloat(chartData[key][subKey])
+            } else {
+                container[subKey.substring(3)] = parseInt(chartData[key][subKey])
+            }
+        }
+        data.push(container)
+    }
+    return data
+}
+
+
 export const getData = (options) => {
     return (dispatch, getState) => {
         axios.post('/stock/api/findStock', {
@@ -8,7 +27,7 @@ export const getData = (options) => {
             interval: options.interval,
             outputSize: options.outputSize
         }).then(({data}) => {
-            dispatch({type: 'GET_DATA', stockData: data, options: options})
+            dispatch({type: 'GET_DATA', stockData: parseData(data), options: options})
         }, (error) => {
             console.log(error)
         })
@@ -18,11 +37,5 @@ export const getData = (options) => {
 export const setChartOptions = (options) => {
     return (dispatch, getState) => {
         dispatch({type: 'SET_CHART_DATA', yValue: options})
-    }
-}
-
-export const setChatYValue = (options) => {
-    return (dispatch, getState) => {
-        dispatch({type: 'SET_SERIES', series: options})
     }
 }

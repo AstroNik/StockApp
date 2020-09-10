@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {getData, setChatYValue} from "../../Store/Actions/StockActions";
+import {getData} from "../../../Store/Actions/StockActions";
 import {Card} from "react-bootstrap";
 import {Button, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, TextField} from '@material-ui/core'
 
@@ -24,8 +24,7 @@ class Form extends Component {
             this.setState({
                 [e.target.name]: e.target.value
             })
-            this.props.setChatYValue(e.target.value)
-        } else if (e.target.value === "TIME_SERIES_DAILY") {
+        } else if (e.target.value === "TIME_SERIES_DAILY" || e.target.value === "TIME_SERIES_DAILY_ADJUSTED") {
             this.setState({
                 disabled: true
             })
@@ -35,18 +34,6 @@ class Form extends Component {
             this.setState({
                 [e.target.name]: e.target.value
             })
-            this.props.setChatYValue(e.target.value)
-        } else if (e.target.value === "TIME_SERIES_DAILY_ADJUSTED") {
-            this.setState({
-                disabled: true
-            })
-            this.setState({
-                interval: ''
-            })
-            this.setState({
-                [e.target.name]: e.target.value
-            })
-            this.props.setChatYValue(e.target.value)
         } else {
             this.setState({
                 [e.target.name]: e.target.value
@@ -62,7 +49,7 @@ class Form extends Component {
 
     render() {
         return (
-            <Card className="p-5 h-100" style={{width:"20vw"}}>
+            <Card className="p-5 h-100" style={{width: "20vw"}}>
                 <form className="w-100 h-100">
                     <div>
                         <h4 style={{textAlign: "center"}}> Find A Stock </h4>
@@ -113,7 +100,8 @@ class Form extends Component {
                     </div>
                     <br/>
                     <div>
-                        <Button variant="contained" color="primary" className="w-100" onClick={this.handleSubmit}> Get Data </Button>
+                        <Button variant="contained" color="primary" className="w-100" onClick={this.handleSubmit}> Get
+                            Data </Button>
                     </div>
                 </form>
             </Card>
@@ -130,7 +118,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         getData: (data) => dispatch(getData(data)),
-        setChatYValue: (data) => dispatch(setChatYValue(data))
     }
 }
 
