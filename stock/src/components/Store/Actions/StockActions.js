@@ -32,9 +32,3 @@ export const getData = (options) => {
         })
     }
 }
-
-export const setChartOptions = (options) => {
-    return (dispatch, getState) => {
-        dispatch({type: 'SET_CHART_DATA', yValue: options})
-    }
-}

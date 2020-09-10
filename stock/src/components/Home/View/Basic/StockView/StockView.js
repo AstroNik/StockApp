@@ -29,10 +29,10 @@ class StockView extends Component {
     render() {
         const {chartData} = this.state
         return (
-            <Card className="h-100" style={{width: "60vw"}}>
+            <Card className="h-100" style={{width: "80vw"}}>
                 <div className="mt-auto mb-auto">
                     {this.isEmpty(chartData) ? (
-                        <div> No Data </div>
+                        <div>  </div>
                     ) : (
                         <CandleStickChart data={this.state.chartData}/>
                     )

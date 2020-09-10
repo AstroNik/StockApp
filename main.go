@@ -70,7 +70,8 @@ func findStock(w http.ResponseWriter, r *http.Request) {
 	err := json.NewDecoder(r.Body).Decode(&data)
 	if err != nil {
 		fmt.Println("error decoding the response")
-		log.Fatal(err)
+		log.Print(err)
+		//log.Fatal(err)
 	}
 	log.Printf("Request Data %+v", data)
 
@@ -94,13 +95,15 @@ func findStock(w http.ResponseWriter, r *http.Request) {
 
 	resp, err := http.Get(url)
 	if err != nil {
-		log.Fatal(err)
+		log.Print(err)
+		//log.Fatal(err)
 	}
 
 	var stockData map[string]interface{}
 	err = json.NewDecoder(resp.Body).Decode(&stockData)
 	if err != nil {
-		log.Fatal(err)
+		log.Print(err)
+		//log.Fatal(err)
 	}
 
 	delete(stockData, "Meta Data")
