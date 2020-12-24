@@ -8,12 +8,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9956b85-8445-4002-99cb-7b6cc95fe17d" name="Default Changelist" comment="Removed Tech Indicators till I can find a better way of modifying internal average calculations, and till I can add and remove features from the chart with the click of a button">
-      <change afterPath="$PROJECT_DIR$/scraper.go" afterDir="false" />
+    <list default="true" id="f9956b85-8445-4002-99cb-7b6cc95fe17d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/stock/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/src/components/Store/Actions/StockActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/stock/src/components/Store/Actions/StockActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/stock/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock/src/components/NavBar/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/stock/src/components/NavBar/NavBar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +115,6 @@
       <path value="$PROJECT_DIR$" />
       <path value="$PROJECT_DIR$/stock" />
     </ignored-roots>
-    <MESSAGE value="Removed file" />
     <MESSAGE value="Added Stock Folder Back to Git" />
     <MESSAGE value="Updated Form" />
     <MESSAGE value="Data now sends to server" />
@@ -142,7 +139,8 @@
     <MESSAGE value="Added CandleStick Display.&#10;Need to implement Technical Indicators" />
     <MESSAGE value="New Data reducer added. Still need to fix date value" />
     <MESSAGE value="Removed Tech Indicators till I can find a better way of modifying internal average calculations, and till I can add and remove features from the chart with the click of a button" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed Tech Indicators till I can find a better way of modifying internal average calculations, and till I can add and remove features from the chart with the click of a button" />
+    <MESSAGE value="removed /stock path" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed /stock path" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

@@ -5,8 +5,8 @@ class NavBar extends Component {
     render() {
         return (
             <Navbar bg="dark" expand="lg" className="justify-content-center fixed-top">
-                <Navbar.Brand href="/stock">
-                    <img src="stock/img/logo.png" alt="logo" width="150px"/>
+                <Navbar.Brand href="/">
+                    <img src="img/logo.png" alt="logo" width="150px"/>
                 </Navbar.Brand>
             </Navbar>
         )
