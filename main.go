@@ -42,10 +42,10 @@ func (h spaHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 func main() {
 	router := mux.NewRouter()
 	//Serve Other Routes Above PathPrefix
-	router.HandleFunc("/stock/api/findStock", findStock)
-	router.HandleFunc("/stock/api/scrape", scrapeWeb)
+	router.HandleFunc("/api/findStock", findStock)
+	router.HandleFunc("/api/scrape", scrapeWeb)
 	spa := spaHandler{staticPath: "./stock/build", indexPath: "index.html"}
-	router.PathPrefix("/stock").Handler(http.StripPrefix("/stock", spa))
+	router.PathPrefix("/").Handler(spa)
 
 	svr := &http.Server{
 		Handler:      router,
