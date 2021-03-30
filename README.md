@@ -1,7 +1,9 @@
 
-# THIS APPLICATION IS GOING TO BE REMADE USING PYTHON (MARCH 30th 2021)
+# THIS APPLICATION IS GOING TO BE REMADE USING PYTHON 
 
-## Stock Operations
+## (MARCH 30th 2021)
+
+### Stock Operations
 
 Web Scraper https://github.com/gocolly/colly
 
